@@ -23,7 +23,7 @@ text("o", 123, 333);//smaller brush
 fill(220);
 rect(156, 320, 40, 20);
 fill(0);
-text("O", 170, 334);//bigger brush
+text("O", 171, 334);//bigger brush
 
 var brushSize = 5;
 mouseDragged = function() {
@@ -100,10 +100,10 @@ mouseClicked = function() {
         ellipse(mouseX, mouseY, 5, 5);//white
         };
             } else if(mouseX > 107 && mouseX < 147 && mouseY < 340 && mouseY > 320) {
-                brushSize -= 1;//shrink brush
+                brushSize -= 2;//shrink brush
                 
             } else if(mouseX > 156 && mouseX < 196 && mouseY < 340 && mouseY > 320) {
-                brushSize += 1;//grow brush
+                brushSize += 2;//grow brush
                 
             } else if(mouseX > 9 && mouseX < 79 && mouseY < 340 && mouseY > 320) {
                 fill(255);
