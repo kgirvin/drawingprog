@@ -1,4 +1,4 @@
-background(255, 255, 255);
+background(255);
 
 fill(255);
 noStroke();
@@ -15,10 +15,21 @@ rect(9, 320, 70, 20);
 fill(0);
 text("C L E A R", 17, 335);//CLEAR button
 
+fill(220);
+rect(107, 320, 40, 20);
+fill(0);
+text("o", 123, 333);//smaller brush
+
+fill(220);
+rect(156, 320, 40, 20);
+fill(0);
+text("O", 170, 334);//bigger brush
+
+var brushSize = 5;
 mouseDragged = function() {
     noStroke();
-    fill(0, 0, 0);
-    ellipse(mouseX, mouseY, 5, 5);
+    fill(0);
+    ellipse(mouseX, mouseY, brushSize, brushSize);
 };
 
 var pallet = [
@@ -34,7 +45,7 @@ var pallet = [
 
 for (var i = 0; i < 8; i++) {
     strokeWeight(3);
-stroke(0, 0, 0);
+stroke(0);
 fill(pallet[i]);
 rect(i*49+9, 350, 40, 40);
 }//color swatches
@@ -44,52 +55,57 @@ mouseClicked = function() {
         mouseDragged = function() {
         noStroke();
         fill(pallet[0]);
-        ellipse(mouseX, mouseY, 5, 5);
+        ellipse(mouseX, mouseY, 5, 5);//red
         };
             } else if(mouseX > 60 && mouseX < 100 && mouseY < 390 && mouseY > 350) {
               mouseDragged = function() {
         noStroke();
         fill(pallet[1]);
-        ellipse(mouseX, mouseY, 5, 5);
+        ellipse(mouseX, mouseY, 5, 5);//orange
         };
             } else if(mouseX > 110 && mouseX < 150 && mouseY < 390 && mouseY > 350) {
               mouseDragged = function() {
         noStroke();
         fill(pallet[2]);
-        ellipse(mouseX, mouseY, 5, 5);
+        ellipse(mouseX, mouseY, 5, 5);//yellow
         };
             } else if(mouseX > 160 && mouseX < 200 && mouseY < 390 && mouseY > 350) {
               mouseDragged = function() {
         noStroke();
         fill(pallet[3]);
-        ellipse(mouseX, mouseY, 5, 5);
+        ellipse(mouseX, mouseY, 5, 5);//green
         };
             } else if(mouseX > 210 && mouseX < 250 && mouseY < 390 && mouseY > 350) {
               mouseDragged = function() {
         noStroke();
         fill(pallet[4]);
-        ellipse(mouseX, mouseY, 5, 5);
+        ellipse(mouseX, mouseY, 5, 5);//blue
         };
             } else if(mouseX > 260 && mouseX < 300 && mouseY < 390 && mouseY > 350) {
               mouseDragged = function() {
         noStroke();
         fill(pallet[5]);
-        ellipse(mouseX, mouseY, 5, 5);
+        ellipse(mouseX, mouseY, 5, 5);//purple
         };
             } else if(mouseX > 310 && mouseX < 350 && mouseY < 390 && mouseY > 350) {
               mouseDragged = function() {
         noStroke();
         fill(pallet[6]);
-        ellipse(mouseX, mouseY, 5, 5);
+        ellipse(mouseX, mouseY, 5, 5);//black
         };
             } else if(mouseX > 360 && mouseX < 390 && mouseY < 390 && mouseY > 350) {
               mouseDragged = function() {
         noStroke();
         fill(pallet[7]);
-        ellipse(mouseX, mouseY, 5, 5);
+        ellipse(mouseX, mouseY, 5, 5);//white
         };
-            }
-            else if(mouseX > 9 && mouseX < 79 && mouseY < 340 && mouseY > 320) {
+            } else if(mouseX > 107 && mouseX < 147 && mouseY < 340 && mouseY > 320) {
+                brushSize -= 1;//shrink brush
+                
+            } else if(mouseX > 156 && mouseX < 196 && mouseY < 340 && mouseY > 320) {
+                brushSize += 1;//grow brush
+                
+            } else if(mouseX > 9 && mouseX < 79 && mouseY < 340 && mouseY > 320) {
                 fill(255);
                 noStroke();
                 rect(0, 0, 400, 310);//redraw whitespace
