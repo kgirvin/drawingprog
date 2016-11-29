@@ -43,6 +43,36 @@ mouseClicked = function() {
         fill(pallet[2]);
         ellipse(mouseX, mouseY, 5, 5);
         };
+            } else if(mouseX > 160 && mouseX < 200 && mouseY < 390 && mouseY > 350) {
+              mouseDragged = function() {
+        noStroke();
+        fill(pallet[3]);
+        ellipse(mouseX, mouseY, 5, 5);
+        };
+            } else if(mouseX > 210 && mouseX < 250 && mouseY < 390 && mouseY > 350) {
+              mouseDragged = function() {
+        noStroke();
+        fill(pallet[4]);
+        ellipse(mouseX, mouseY, 5, 5);
+        };
+            } else if(mouseX > 260 && mouseX < 300 && mouseY < 390 && mouseY > 350) {
+              mouseDragged = function() {
+        noStroke();
+        fill(pallet[5]);
+        ellipse(mouseX, mouseY, 5, 5);
+        };
+            } else if(mouseX > 310 && mouseX < 350 && mouseY < 390 && mouseY > 350) {
+              mouseDragged = function() {
+        noStroke();
+        fill(pallet[6]);
+        ellipse(mouseX, mouseY, 5, 5);
+        };
+            } else if(mouseX > 360 && mouseX < 390 && mouseY < 390 && mouseY > 350) {
+              mouseDragged = function() {
+        noStroke();
+        fill(pallet[7]);
+        ellipse(mouseX, mouseY, 5, 5);
+        };
             }
             
 };
